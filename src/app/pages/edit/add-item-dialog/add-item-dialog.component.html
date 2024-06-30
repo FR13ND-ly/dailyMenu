@@ -1,0 +1,26 @@
+<form [formGroup]="addItemForm" (ngSubmit)="onAddItem()">
+    <section>
+        <mat-form-field appearance="outline">
+            <mat-label>Titlu</mat-label>
+            <input matInput type="text" formControlName="title" />
+            <mat-error *ngIf="addItemForm.get('title')?.hasError('required')">
+                Titlul este obligatoriu
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Pret</mat-label>
+            <input matInput type="number" formControlName="price" />
+            <mat-error *ngIf="addItemForm.get('price')?.hasError('required')">
+                Pretul este obligatoriu
+            </mat-error>
+        </mat-form-field>
+    </section>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Descriere</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Adaugă</button>
+</form>

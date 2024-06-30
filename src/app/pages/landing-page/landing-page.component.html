@@ -1,0 +1,16 @@
+<div class="items" *ngIf="items$ | async as items">
+    @for (item of items; track item.id) {
+        <article>
+            <span class="title">{{ item.title }} - <b class="price">{{ item.price }} lei</b></span>
+            <p *ngIf="item.description">{{ item.description }}</p>
+        </article>
+    }
+</div>
+<div class="sidebar">
+    <section class="time">
+        <span class="date">{{ date }}</span>
+        <span class="month">{{ month }}</span>
+    </section>
+
+    <img class="illustration" src="https://cdn-icons-png.freepik.com/256/1027/1027128.png?semt=ais_hybrid">
+</div>
