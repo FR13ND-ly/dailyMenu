@@ -19,7 +19,7 @@
             </mat-form-field>
             <div class="actions">
                 <button mat-stroked-button (click)="onUpdateItem(item)" color="primary"><mat-icon>edit</mat-icon> Modifică</button>
-                <button mat-stroked-button (click)="onRemoveItem(item)" color="warn"><mat-icon>delete</mat-icon> Șterge</button>
+                <button mat-stroked-button (click)="onRemoveItem(item, items, $index)" color="warn"><mat-icon>delete</mat-icon> Șterge</button>
             </div>
         </article>
     }    

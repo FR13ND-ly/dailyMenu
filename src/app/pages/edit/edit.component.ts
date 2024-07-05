@@ -27,7 +27,9 @@ export class EditComponent {
     this.itemsService.updateItem(item);
   }
 
-  onRemoveItem(item: any) {
-    this.itemsService.removeItem(item);
+  onRemoveItem(item: any, items: any, index: any) {
+    this.itemsService.removeItem(item).subscribe(() => {
+      items.splice(index, 1);
+    });
   }
 }

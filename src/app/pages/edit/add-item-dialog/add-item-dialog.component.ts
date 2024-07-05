@@ -25,11 +25,9 @@ export class AddItemDialogComponent {
 
   onAddItem() {
     if (!this.addItemForm.valid) return
-    let item = {
-      id : Date.now(),
-      ...this.addItemForm.value
-    }
-    this.itemsService.addItem(item);
-    this.dialog.close()
+    
+    this.itemsService.addItem(this.addItemForm.value).subscribe(() => {
+      this.dialog.close()
+    });
   }
 }

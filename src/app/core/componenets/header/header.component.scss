@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
+    align-items: center;
     height: 20vh;
     position: relative;
     box-sizing: border-box;
@@ -13,7 +14,7 @@
 }
 
 h1 {
-    margin-top: 2.7rem;
+    
     font-size: 5rem;
     cursor: pointer;
 }
